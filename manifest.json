@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Hello Extensions",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "action": {
+      "default_popup": "hello.html",
+      "default_icon": "hello_extensions.png"
+    },
+    "permissions": [
+        "tabs"
+      ],
+    "content_scripts": [
+        {
+          "matches": ["https://*.docs.google.com/forms/d/e/*"],
+          
+          "js": ["index.js"]
+        }
+      ],
+      "web_accessible_resources": [
+         "firebase.js",
+         "node_modules/twilio/*"
+         
+      ],
+      "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+      
+  }
