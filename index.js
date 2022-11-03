@@ -10,7 +10,7 @@ setTimeout(()=>{
 
 (async () => {
     
-    const fireApp = await import('./firebase.js');
+    await import('./firebase.js');
     
   })();
 
